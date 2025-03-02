@@ -7,7 +7,8 @@ from story2.grammar import GrammarParser
 from story2.tokenizer import Tokenizer
 from story2.generator import generate
 
-def main():
+
+def test_main():
     file = "story2/toy.gram"
     print("Reading", file)
     with open(file) as f:
@@ -29,5 +30,8 @@ def main():
     with open(outfile, "w") as stream:
         generate(rules, stream)
 
-if __name__ == '__main__':
-    main()
+    assert False
+
+
+if __name__ == "__main__":
+    test_main()
